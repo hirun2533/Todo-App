@@ -10,22 +10,28 @@ import { Items} from '../items.model';
 })
 export class DashboardComponent implements OnInit {
    
- MyList: Items [];
+ MyList: Items[];
+ itemservice: TodoItemService
 
+ constructor(itemservice: TodoItemService,) {
 
- constructor(public itemservice: TodoItemService ) {
    this.itemservice = itemservice;
-   this.MyList = [   new Items ("Book Airplane Ticket", "urgent"),
-                     new Items ("Call Dad", "days"),
-                     new Items ("Pick up prescription", "urgent"),
-                     new Items ("Sumbit assignment", "week")];
-  
    
+   this.MyList = [   
+     new Items ("Book Airline Tickets", "urgent"),
+     new Items ("Call Dad", "days"),
+     new Items ("Pick up prescription", "urgent"),
+     new Items ("Submit assignment", "week")
+    ];
+  
+  
  }
  
- ArrayItems(): Items[] {
+ 
+  ArrayItems(): Items[] {
+  
    return this.MyList;
- }
+  }
   
     ngOnInit() {
     }

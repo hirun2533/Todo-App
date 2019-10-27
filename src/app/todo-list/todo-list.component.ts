@@ -10,7 +10,6 @@ import { Items} from '../items.model';
 export class TodoListComponent implements OnInit {
   @Input() itemList: Items[];
   constructor() { 
-    console.log(this.itemList.length);
   }
 
   ngOnInit() {

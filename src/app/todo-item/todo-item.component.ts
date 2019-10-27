@@ -13,8 +13,9 @@ export class TodoItemComponent implements OnInit {
   urgent: boolean;
   days:boolean;
   week: boolean;
+  itemservice: TodoItemService
 
-  constructor( public itemservice: TodoItemService) {
+  constructor( itemservice: TodoItemService) {
     this.itemservice = itemservice;
   }
 

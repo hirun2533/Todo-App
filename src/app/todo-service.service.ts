@@ -7,16 +7,18 @@ import { Items } from './items.model';
 })
 export class TodoItemService {
   ArrayItems: Items[]; 
-  urgent: boolean;
+  dueDate: string;
+  urgent: boolean; 
   days:boolean;
   week: boolean;
-    dueDate: string;
+  text:string; 
 
 
   constructor() { 
     this.urgent = false; 
     this.days = false; 
     this.week = false; 
+    
   }
  
    Update(Choice?: string): [boolean,boolean,boolean] {
@@ -42,9 +44,11 @@ export class TodoItemService {
    
      return [this.urgent, this.days, this.week];
   }
+
   addTask(ArrayTask?: Items[], text?:string, dueDate?: string ): Items[]{
+    var Tasks = new Items(text, dueDate);
+    
     this.ArrayItems = ArrayTask;
-    const Tasks = new Items(text, dueDate);
     this.ArrayItems.push(Tasks);
     return this.ArrayItems;
     

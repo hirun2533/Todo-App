@@ -10,8 +10,10 @@ import { Items } from '../items.model';
 export class NewTodoItemComponent implements OnInit {
 
   @Input() ArrayItem: Items[];
+  MyList: TodoItemService; 
 
-  constructor(public MyList: TodoItemService ){
+
+  constructor(MyList: TodoItemService ){
     this.MyList = MyList;
   }
 
