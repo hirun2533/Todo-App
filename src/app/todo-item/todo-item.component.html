@@ -1,0 +1,23 @@
+
+<div class= "Stylelike"> 
+  
+  {{ItemList.todoList}}
+    
+    <button [ngClass] = "{'urgent': urgent}"
+     (click) = 'ChangeState("urgent")' class="layout">
+     urgent
+  
+    </button>
+
+    <button [ngClass] = "{'days': days}" 
+    (click) = 'ChangeState("days")'class="layout">
+    days
+    </button>
+
+    <button [ngClass] = "{'week': week}"
+    (click) = 'ChangeState("week")' class="layout">
+    week
+    </button>
+</div>
+
+

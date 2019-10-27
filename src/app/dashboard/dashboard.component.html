@@ -1,0 +1,12 @@
+<div >To do List</div>
+
+<h1>
+   <app-new-todo-item *ngFor= "let item of ArrayItems()" [ArrayItem] = "ArrayItems()"></app-new-todo-item>
+  
+</h1> 
+
+<div>
+  <app-todo-item *ngFor="let i of MyList" [ItemList]="i">
+   </app-todo-item>
+    
+</div>

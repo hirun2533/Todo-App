@@ -1,0 +1,38 @@
+
+   .Stylelike{
+    font-family: "sans-serif"; 
+      /* width: 60px; */
+    /* height: 50px; */
+    font-size: 18px;
+    margin-left:10px;
+    margin-top: 20px;
+    bottom: -60px;
+    position: relative;
+  
+    
+}
+  
+.layout{
+   margin: 5px; 
+  /* top: 8px;
+  right: 16px; */
+  display: inline-block;
+  font-size: 12px;
+  /* position: relative; */
+  /* border: 3px solid #73AD21; */
+  padding: 5px 10px;
+}
+
+  .urgent{
+    background-color: rgb(245, 12, 12);
+    
+    /* margin-left: 10px; */
+    }
+  .days{
+    background-color:  rgb(243, 219, 7);
+   
+    }
+  .week {
+    background-color:  rgb(10, 26, 247);
+  }
+    

@@ -1,0 +1,17 @@
+.Style {
+    font-family: "sans-serif"; 
+    position:absolute; 
+    margin-left: 50px;
+    font-size: 18px;
+    color: brown;
+  }
+  .layout{
+    margin: 5px; 
+    position:absolute; 
+   display: inline-block;
+   font-size: 12px;
+ 
+   padding: 5px 10px;
+ }
+
+  
