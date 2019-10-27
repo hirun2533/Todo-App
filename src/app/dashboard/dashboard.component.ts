@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoItemService} from '../todo-service.service';
-// import { NewTodoItemComponent } from '../new-todo-item/new-todo-item.component';
 import { Items} from '../items.model';
 
 @Component({
