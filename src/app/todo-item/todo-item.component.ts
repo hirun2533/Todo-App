@@ -6,16 +6,16 @@ import { Items } from '../items.model';
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css'],
-  providers: [ TodoItemService ]
+
 })
 export class TodoItemComponent implements OnInit {
   @Input() ItemList: Items;
   urgent: boolean;
   days:boolean;
   week: boolean;
-  itemservice: TodoItemService
+  taskList: Items[];
 
-  constructor( itemservice: TodoItemService) {
+  constructor(public itemservice: TodoItemService) {
     this.itemservice = itemservice;
   }
 
@@ -24,9 +24,14 @@ export class TodoItemComponent implements OnInit {
   }
 
 
+  
+  deleteTask(items: string) : void{
+    console.log(items);
+    this.taskList = this.itemservice.delete(items);
+  }
+  
   ngOnInit() {
   
   }
-
 }
 

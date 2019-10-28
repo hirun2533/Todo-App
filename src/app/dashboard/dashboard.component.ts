@@ -10,25 +10,19 @@ import { Items} from '../items.model';
 export class DashboardComponent implements OnInit {
    
  MyList: Items[];
- itemservice: TodoItemService
 
- constructor(itemservice: TodoItemService,) {
 
-   this.itemservice = itemservice;
+ constructor(public itemservice: TodoItemService,) {
+
+   itemservice.createTask();
+   this.MyList = itemservice.getTask();
    
-   this.MyList = [   
-     new Items ("Book Airline Tickets", "urgent"),
-     new Items ("Call Dad", "days"),
-     new Items ("Pick up prescription", "urgent"),
-     new Items ("Submit assignment", "week")
-    ];
-  
   
  }
  
  
   ArrayItems(): Items[] {
-  
+    this.MyList = this.itemservice.getTask();
    return this.MyList;
   }
   
